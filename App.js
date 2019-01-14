@@ -42,10 +42,13 @@ export default class App extends Component<{}> {
           5.  Last list{'\n\n'}
           Some *really* basic **Markdown**.{'\n\n'}
 
+          > Test block Quote{'\n'}
+          > Another  block Quote{'\n\n'}
+          
+          {'this is _italic_ '}{'\n'}
+          {'this is **strong**'}{'\n\n'}
 
           ## this is header {'\n\n\n\n'}
-          {'this is _italic_ '}
-          {'this is **strong**'}
 
           {'\n\n'}
           | # | Name   | Age |{'\n'}
@@ -91,6 +94,22 @@ const styles = {
     },
     text: {
       color: 'magenta',
-    }
+    },
+    blockQuoteText: {
+      color: 'grey'
+    },
+    blockQuoteSection: {
+      flexDirection: 'row',
+    },
+    blockQuoteSectionBar: {
+      width: 3,
+      height: null,
+      backgroundColor: '#DDDDDD',
+      marginRight: 15,
+    },
+    codeBlock: {
+      fontFamily: 'Courier',
+      fontWeight: '500',
+    },
   }
 };
