@@ -20,6 +20,35 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+const text = `
+# This is Heading 1
+## This is Heading 2
+1. List1
+2. List2
+  This is a description for List2 .\n
+  * test
+  * test
+3. List3
+4. List4
+
+Below is some example to print blockquote
+
+> Test block Quote
+> Another  block Quote
+
+this is _italic_ 
+this is **strong**
+Some *really* basic **Markdown**.
+
+## this is header 
+
+| # | Name   | Age 
+|---|--------|-----|
+| 1 | John   | 19  |
+| 2 | Sally  | 18  |
+| 3 | Stream | 20  |
+` ;
+
 export default class App extends Component<{}> {
   render() {
     return (
@@ -28,34 +57,7 @@ export default class App extends Component<{}> {
           Welcome to React Native!
         </Text>
         <Markdown styles={styles.markdown} >
-          # This is Heading 1{'\n\n'}
-          ## This is Heading 2{'\n\n'}
-          1. List1 {'\n'}
-          2. List2 {'\n'} 
-          {'\t'}1. sublist1{'\n'}
-          {'\t'}description sublist1.{'\n'}
-          {'\t'}2. sublist2{'\t\t'}{'\n'}
-          * List3{'\n'}
-          * List4{'\n'}
-          {'\t'}1. **bold text** {'\n'}
-          {'\t'}2. this line contain * and should not be a new sublist{'\t\t'}{'\n'}
-          5.  Last list{'\n\n'}
-          Some *really* basic **Markdown**.{'\n\n'}
-
-          > Test block Quote{'\n'}
-          > Another  block Quote{'\n\n'}
-          
-          {'this is _italic_ '}{'\n'}
-          {'this is **strong**'}{'\n\n'}
-
-          ## this is header {'\n\n\n\n'}
-
-          {'\n\n'}
-          | # | Name   | Age |{'\n'}
-          |---|--------|-----|{'\n'}
-          | 1 | John   | 19  |{'\n'}
-          | 2 | Sally  | 18  |{'\n'}
-          | 3 | Stream | 20  |{'\n'}
+          { text } 
         </Markdown>
       </View>
     );
@@ -93,7 +95,7 @@ const styles = {
       color: 'cyan'
     },
     text: {
-      color: 'magenta',
+      color: 'black',
     },
     blockQuoteText: {
       color: 'grey'
@@ -110,6 +112,9 @@ const styles = {
     codeBlock: {
       fontFamily: 'Courier',
       fontWeight: '500',
+    },
+    tableHeader: {
+      backgroundColor: 'grey',
     },
   }
 };
