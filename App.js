@@ -25,11 +25,28 @@ const text = `
 ## This is Heading 2
 1. List1
 2. List2
-  This is a description for List2 .\n
+  This is a \`description\`  for List2 .\n
   * test
   * test
 3. List3
-4. List4
+4. List4.
+
+
+You can also put some url as a link [like This](https://this.isurl.com) or write it as a plain text:
+  https://this.isurl.com
+  <thisis@email.com>
+
+---
+
+This text should be printed between horizontal rules
+
+---
+
+The following code is an example for codeblock:
+
+    const a = function() {
+      runSomeFunction()
+    };
 
 Below is some example to print blockquote
 
@@ -40,7 +57,6 @@ this is _italic_
 this is **strong**
 Some *really* basic **Markdown**.
 
-## this is header 
 
 | # | Name   | Age 
 |---|--------|-----|
@@ -53,12 +69,13 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Markdown styles={styles.markdown} >
-          { text } 
-        </Markdown>
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+          <Markdown styles={styles.markdown} >
+            { text } 
+          </Markdown>
+        
       </View>
     );
   }
@@ -70,11 +87,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    margin: 10,
+    padding:20
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
   },
   instructions: {
     textAlign: 'center',
@@ -112,6 +130,7 @@ const styles = {
     codeBlock: {
       fontFamily: 'Courier',
       fontWeight: '500',
+      backgroundColor: '#DDDDDD',
     },
     tableHeader: {
       backgroundColor: 'grey',
