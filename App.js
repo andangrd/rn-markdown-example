@@ -56,7 +56,7 @@ Below is some example to print blockquote
 
 this is _italic_ 
 this is **strong**
-Some *really* basic **Markdown**.
+Some *really* ~~basic~~ **Markdown**.
 
 
 | # | Name   | Age 
@@ -97,6 +97,8 @@ const styles = {
   welcome: {
     fontSize: 20,
     textAlign: 'center',
+    textDecorationLine: 'line-through',
+      textDecorationStyle: 'solid'
   },
   instructions: {
     textAlign: 'center',
