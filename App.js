@@ -78,7 +78,6 @@ this is an example for adding picture:
 
 `;
 const encodeImageFileAsURL = (element) => {
-  console.log('hahaha', element)
   var file = element;
   var reader = new FileReader();
   reader.onloadend = function() {
