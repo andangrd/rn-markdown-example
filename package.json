@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.2",
-    "react-native-markdown-package": "git://github.com/andangrd/react-native-markdown-package.git#feature/update-dependencies-versions",
+    "react-native-markdown-package": "git://github.com/andangrd/react-native-markdown-package.git#bugfix/add-default-font-familly-for-android",
     "simple-markdown": "^0.6.0"
   },
   "devDependencies": {

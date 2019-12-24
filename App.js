@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Component}from 'react';
+import React, {Component} from 'react';
 import {
   StyleSheet,
   ScrollView,
@@ -73,46 +73,31 @@ this is an example for adding picture:
 
 ![Screen Shot 2019-10-05 at 3 19 33 AM](https://user-images.githubusercontent.com/26213148/66237659-d11f4280-e71f-11e9-91e3-7a3f08659d89.png)
 
-![Screen Shot 2019-10-05 at 3 19 33 AM](require('./assets/test-local-pict.png')
-
-
 `;
-const encodeImageFileAsURL = (element) => {
-  var file = element;
-  var reader = new FileReader();
-  reader.onloadend = function() {
-    console.log('RESULT', reader.result)
-  }
-  reader.readAsDataURL(file);
-}
-
-
-const imageUri = encodeImageFileAsURL(require('./assets/test-local-pict.png'))
-
 
 class App extends Component<{}> {
   render() {
     return (
       <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-      <View style={styles.container}>
+        contentInsetAdjustmentBehavior="automatic"
+        style={styles.scrollView}>
+        <View style={styles.container}>
           <Text style={styles.welcome}>
             Welcome to React Native!
           </Text>
-          <Markdown 
-            styles={markdownStyle.collectiveMd} 
+          <Markdown
+            styles={markdownStyle.collectiveMd}
             onLink={(url) => Linking.openURL(url)}
           >
-            { text } 
+            {text}
           </Markdown>
-          <Markdown 
+          <Markdown
             styles={markdownStyle.singleLineMd}
           >
             this is a test single line md
           </Markdown>
-      </View>
-    </ScrollView>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -157,7 +142,6 @@ const markdownStyle = {
       marginRight: 15,
     },
     codeBlock: {
-      fontFamily: 'Courier',
       fontWeight: '500',
       backgroundColor: '#DDDDDD',
     },
@@ -174,7 +158,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
     margin: 10,
-    padding:20
+    padding: 20
   },
   scrollView: {
     backgroundColor: Colors.lighter,
