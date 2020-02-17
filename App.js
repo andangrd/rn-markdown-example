@@ -35,6 +35,10 @@ const text = `
 * Unique list char2 ß
 * Unique list char3 ß
 
+- Not bold &
+- **Manually set to bold &**
+- Suddenly bold &
+
 
 You can also put some url as a link [like This](https://www.google.com) or write it as a plain text:
   https://www.google.com

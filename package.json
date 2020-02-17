@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.2",
-    "react-native-markdown-package": "^1.6.3",
+    "react-native-markdown-package": "^1.7.0",
     "simple-markdown": "^0.6.0"
   },
   "devDependencies": {
